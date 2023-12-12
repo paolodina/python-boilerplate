@@ -47,6 +47,10 @@ build:
 	@pip-compile --output-file=requirements.txt pyproject.toml
 	@pip-compile --extra=dev --output-file=requirements-dev.txt pyproject.toml
 
+## Build the documentation
+doc:
+	PYTHONPATH=./src pdoc --math ./src -o ./docs
+
 ## Build the docker image
 docker:
 	docker build -f Dockerfile -t boilerplate .
