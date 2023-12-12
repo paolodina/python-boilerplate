@@ -1,4 +1,4 @@
-.PHONY: install clean lint format 
+.PHONY: install clean lint format
 
 ## Install for production
 install:
@@ -6,7 +6,7 @@ install:
 	@python -m pip install --upgrade pip
 	@python -m pip install -e .
 
-## Install for development 
+## Install for development
 install-dev: install
 	@python -m pip install -e ".[dev]"
 	@pre-commit install
@@ -22,14 +22,14 @@ clean:
 	@rm -rf build
 	@rm -rf dist
 
-## Format files using black
+## Format files using Ruff
 format:
 	@ruff . --fix
 	@ruff format .
 
 ## Run tests
 test:
-	@pytest --cov=src --cov-report xml --log-level=WARNING --disable-pytest-warnings
+	@pytest -v --cov --cov-report term-missing:skip-covered --disable-pytest-warnings
 
 ## Run checks (ruff + test)
 check:
@@ -114,4 +114,3 @@ help:
 		printf "\n"; \
 	}' \
 	| more $(shell test $(shell uname) = Darwin && echo '--no-init --raw-control-chars')
-
