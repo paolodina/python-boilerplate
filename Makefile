@@ -21,6 +21,7 @@ clean:
 	@rm -rf **/__pycache__
 	@rm -rf build
 	@rm -rf dist
+	@rm -rf docs
 
 ## Format files using Ruff
 format:
