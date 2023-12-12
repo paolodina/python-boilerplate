@@ -38,6 +38,7 @@ test:
 check:
 	@ruff check .
 	@ruff format --check .
+	@mypy . --ignore-missing-imports --install-types --non-interactive
 
 ## Run api
 api:

@@ -14,6 +14,7 @@ dev = [
   "pytest>=7.2.0",
   "pytest-cov>=4.0.0",
   "ruff>=0.0.219",
+  "mypy>=1.3.0",
   "watchdog>=2.1.9",
   "httpx>=0.23.2",
 ]
@@ -25,6 +26,10 @@ line-length = 79
 fixable = ["I"]
 exclude = [".env", ".venv", "venv", "notebooks"]
 show-source = true
+
+[tool.mypy]
+files = ["src"]
+exclude = [".env", ".venv", "venv", "notebooks"]
 
 [tool.coverage.paths]
 source = ["src"]
