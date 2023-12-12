@@ -9,6 +9,7 @@ install:
 ## Install for development 
 install-dev: install
 	@python -m pip install -e ".[dev]"
+	@pre-commit install
 
 ## Delete all temporary files
 clean:
