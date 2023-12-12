@@ -21,10 +21,6 @@ clean:
 	@rm -rf build
 	@rm -rf dist
 
-## Lint using ruff
-ruff:
-	@ruff .
-
 ## Format files using black
 format:
 	@ruff . --fix
