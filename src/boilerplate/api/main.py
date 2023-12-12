@@ -1,3 +1,4 @@
+"""Docstring"""
 import pkg_resources
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
@@ -11,12 +12,14 @@ app = FastAPI(
 
 
 @app.get("/")
-async def root():
+async def root() -> RedirectResponse:
+    """Redirect to docs."""
     return RedirectResponse("/docs")
 
 
 @app.post(
     "/hello",
 )
-async def hello():
+async def hello() -> str:
+    """Hello"""
     return hello_world()
