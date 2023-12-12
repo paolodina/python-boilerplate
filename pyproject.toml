@@ -4,9 +4,9 @@ build-backend = "hatchling.build"
 
 [project]
 name = "boilerplate"
-version = "23.5.24"
+version = "0.0.0"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.8"
 dependencies = ["fastapi>=0.88.0", "uvicorn>=0.20.0", "pandas"]
 
 [project.optional-dependencies]
