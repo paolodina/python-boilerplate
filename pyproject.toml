@@ -20,10 +20,18 @@ dev = [
 ]
 
 [tool.ruff]
-ignore = ["E501"]
-select = ["E", "F", "I", "W"]
+ignore = [
+  "ANN002", "ANN003", "ANN101", "ANN204",
+  "D107", "D203", "D205", "D213", "D400", "D401", "D415",
+  "E501", "PD901", "RET504"
+]
+select = [
+  "A", "ANN", "ARG", "B", "C4", "COM", "D", "E",
+  "F", "FA", "I", "N", "NPY", "PD",
+  "PIE", "PLC", "PLE", "PLW", "Q",
+  "RET", "RSE", "SIM", "TRY", "UP", "W"
+]
 line-length = 79
-fixable = ["I"]
 exclude = [".env", ".venv", "venv", "notebooks"]
 show-source = true
 
