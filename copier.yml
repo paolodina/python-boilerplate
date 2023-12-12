@@ -1,14 +1,27 @@
 ## Copier config
 _templates_suffix: ""
 _exclude: ["copier.yaml", "copier.yml", "~*", "*.py[co]", "__pycache__", ".git", ".github", ".DS_Store", ".svn", ".idea"]
+_message_after_copy: |
+    Your project "{{ project_name }}" has been created successfully!
+    Next steps:
+    1. Change directory to the project root:
+       $ cd {{ _copier_conf.dst_path }}
+    2. Check out "README.md" and start coding.
+
+readme:
+  when: false
+  default: README.md
 
 ## User questionnaire
 project_name:
   type: str
-  help: Your project name
+  help: "Your project name:"
 
 python_package_name:
   type: str
-  help: Your python package name
   default: "{{ project_name|lower|replace('_', '-')|replace(' ', '-') }}"
   when: false
+
+project_description:
+  type: str
+  help: "A short description for your project:"
