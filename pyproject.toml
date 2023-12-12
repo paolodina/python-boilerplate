@@ -50,13 +50,3 @@ relative_files = true
 show_missing = true
 fail_under = 80
 
-[tool.black]
-line-length = 79
-extend-exclude = '''
-/(
-  | .env
-  | .venv
-  | venv
-  | notebooks
-)/
-'''
