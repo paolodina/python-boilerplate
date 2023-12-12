@@ -1,0 +1,14 @@
+## Copier config
+_templates_suffix: ""
+_exclude: ["copier.yaml", "copier.yml", "~*", "*.py[co]", "__pycache__", ".git", ".github", ".DS_Store", ".svn", ".idea"]
+
+## User questionnaire
+project_name:
+  type: str
+  help: Your project name
+
+python_package_name:
+  type: str
+  help: Your python package name
+  default: "{{ project_name|lower|replace('_', '-')|replace(' ', '-') }}"
+  when: false

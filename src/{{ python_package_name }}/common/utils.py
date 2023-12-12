@@ -11,7 +11,7 @@ def get_logger(name: str) -> logging.Logger:
     logger.setLevel(logging.INFO)
     os.makedirs("log", exist_ok=True)
     # file handler
-    fh = logging.FileHandler(f"log/{datetime.now().date()}.log")
+    fh = logging.FileHandler(f"log/{{ python_package_name }}.{datetime.now().date()}.log")
     fh.setLevel(level=logging.DEBUG)
     # console handler
     sh = logging.StreamHandler(sys.stderr)

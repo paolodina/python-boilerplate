@@ -1,4 +1,4 @@
-from boilerplate.api.main import app
+from {{python_package_name}}.api.main import app
 from fastapi.testclient import TestClient
 
 client = TestClient(app)

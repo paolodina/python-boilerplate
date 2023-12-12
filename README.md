@@ -1,4 +1,10 @@
-# Predictor: An example project
+# {{ project_name }}
+
+To create a new project from this template:
+```shell
+pip install copier
+copier copy . path/to/destination
+```
 
 ## Development
 

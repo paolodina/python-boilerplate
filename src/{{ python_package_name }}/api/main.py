@@ -3,7 +3,7 @@ import pkg_resources
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 
-from boilerplate.common.main import hello_world
+from {{ python_package_name }}.common.main import hello_world
 
 app = FastAPI(
     title="Boilerplate API",

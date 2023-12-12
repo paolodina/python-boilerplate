@@ -1,5 +1,5 @@
 """Docstring"""
-from boilerplate.common.utils import get_logger
+from {{ python_package_name }}.common.utils import get_logger
 
 logger = get_logger(__name__)
 
