@@ -1,7 +1,17 @@
 # Python Project Template
 
+### Quick start
+
 To create a new project from this template:
 ```shell
 pip install copier
 copier copy --overwrite https://github.com/massimo-lu/boilerplate path/to/destination
 ```
+
+### Design choices
+* [Hatchling](https://hatch.pypa.io/latest/) build system
+* [Ruff](https://docs.astral.sh/ruff/) formatting
+* [Mypy](https://mypy.readthedocs.io/en/stable/) type checking
+* [Pre-commit](https://pre-commit.com/) to enforce Ruff and Mypy checks
+* [Pdoc](https://pdoc.dev/) documentation
+
