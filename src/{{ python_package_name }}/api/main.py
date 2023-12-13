@@ -6,8 +6,8 @@ from fastapi.responses import RedirectResponse
 from {{ python_package_name }}.common.main import hello_world
 
 app = FastAPI(
-    title="Boilerplate API",
-    version=pkg_resources.get_distribution("boilerplate").version,
+    title="{{ project_name }} API",
+    version=pkg_resources.get_distribution("{{ python_package_name }}").version,
 )
 
 
