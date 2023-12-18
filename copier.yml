@@ -1,4 +1,5 @@
 ## Copier config
+_subdirectory: "template"
 _templates_suffix: ""
 _exclude: ["copier.yaml", "copier.yml", "~*", "*.py[co]", "__pycache__", ".git", ".github", ".DS_Store", ".svn", ".idea"]
 _message_after_copy: |
@@ -7,10 +8,6 @@ _message_after_copy: |
     1. Change directory to the project root:
        $ cd {{ _copier_conf.dst_path }}
     2. Check out "README.md" and start coding.
-
-readme:
-  when: false
-  default: README.md
 
 ## User questionnaire
 project_name:
