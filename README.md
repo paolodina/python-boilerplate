@@ -14,4 +14,4 @@ copier copy --overwrite https://github.com/massimo-lu/boilerplate path/to/destin
 * [Mypy](https://mypy.readthedocs.io/en/stable/) type checking
 * [Pre-commit](https://pre-commit.com/) to enforce Ruff and Mypy checks
 * [Pdoc](https://pdoc.dev/) documentation
-
+* [Typer](https://typer.tiangolo.com/) command-line interface
