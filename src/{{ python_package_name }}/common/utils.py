@@ -1,8 +1,10 @@
 """Logging utilities."""
 import logging
 import os
-import sys
 from datetime import datetime
+
+from rich.console import Console
+from rich.logging import RichHandler
 
 
 def get_logger(name: str) -> logging.Logger:
@@ -14,14 +16,13 @@ def get_logger(name: str) -> logging.Logger:
     fh = logging.FileHandler(f"log/{{ python_package_name }}.{datetime.now().date()}.log")
     fh.setLevel(level=logging.DEBUG)
     # console handler
-    sh = logging.StreamHandler(sys.stderr)
-    fh.setLevel(level=logging.INFO)
+    sh = RichHandler(console=Console(stderr=True))
+    sh.setLevel(level=logging.INFO)
     # formatter
     formatter = logging.Formatter(
         "[%(asctime)s] %(name)s:%(levelname)s: %(message)s"
     )
     fh.setFormatter(formatter)
-    sh.setFormatter(formatter)
     # add handlers
     logger.addHandler(fh)
     logger.addHandler(sh)

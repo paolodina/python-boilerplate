@@ -8,7 +8,12 @@ version = "0.0.0"
 readme = "README.md"
 description = "{{ project_description }}"
 requires-python = ">=3.8"
-dependencies = ["fastapi>=0.88.0", "uvicorn>=0.20.0", "pandas"]
+dependencies = [
+  "fastapi>=0.88.0",
+  "uvicorn>=0.20.0",
+  "pandas",
+  "rich>=13.7.0",
+]
 
 [project.optional-dependencies]
 dev = [
