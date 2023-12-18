@@ -13,7 +13,11 @@ dependencies = [
   "uvicorn>=0.20.0",
   "pandas",
   "rich>=13.7.0",
+  "typer>=0.9.0",
 ]
+
+[project.scripts]
+{{ python_package_name }} = "{{python_package_name}}.common.main:cli"
 
 [project.optional-dependencies]
 dev = [

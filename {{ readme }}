@@ -2,6 +2,23 @@
 
 {{ project_description }}
 
+## Quick start
+
+Install the package
+```shell
+make install
+```
+
+Run through the CLI:
+```shell
+{{ python_package_name }} --help
+```
+
+Or start the API:
+```shell
+make api
+```
+
 ## Development
 
 * Make sure you are running in a virtual environment (e.g., `python3 -m venv .env`)
