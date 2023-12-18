@@ -40,7 +40,7 @@ check:
 
 ## Run api
 api:
-	@python -m uvicorn src.boilerplate.api.main:app --reload
+	@python -m uvicorn src.{{ python_package_name }}.api.main:app --reload
 
 ## Build using pip-tools
 build:
