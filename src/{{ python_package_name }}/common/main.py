@@ -19,5 +19,5 @@ def hello_world(
     return f"We are here, {name}"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     cli()
