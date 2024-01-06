@@ -2,11 +2,14 @@
 
 ### ✨ Quick start
 
-To create a new project from this template:
+To create a new project from this template, simply run:
 ```shell
 pip install copier
 copier copy https://github.com/massimo-lu/boilerplate path/to/destination
 ```
+Answer the prompt questions and enjoy!
+
+![copier gif](img/boilerplate.gif)
 
 ### 📐 Design choices
 * [Hatchling](https://hatch.pypa.io/latest/) build system
