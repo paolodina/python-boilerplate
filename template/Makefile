@@ -46,8 +46,9 @@ api:
 build:
 	@python -m pip install --upgrade pip
 	@python -m pip install --upgrade pip-tools
-	@pip-compile --output-file=requirements.txt pyproject.toml
-	@pip-compile --extra=dev --output-file=requirements-dev.txt pyproject.toml
+	@pip-compile --output-file=requirements.txt pyproject.toml --strip-extras
+	@pip-compile --extra=dev --output-file=requirements-dev.txt pyproject.toml --strip-extras
+	@pip wheel --no-deps . --wheel-dir dist
 
 ## Build the documentation
 doc:
