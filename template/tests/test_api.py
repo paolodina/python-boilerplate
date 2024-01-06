@@ -10,6 +10,6 @@ class TestAPI:
         assert response.status_code == 200
 
     def test_read_hello(self):
-        response = client.post("/hello")
+        response = client.post("/hello", json={"name": "World"})
         assert response.status_code == 200
         assert "Hello" in response.text
