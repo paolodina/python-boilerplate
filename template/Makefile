@@ -1,4 +1,4 @@
-.PHONY: install clean lint format
+.PHONY: install clean format test check api build doc docker
 
 ## Install for production
 install:
