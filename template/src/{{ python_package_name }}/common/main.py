@@ -10,11 +10,11 @@ cli = typer.Typer(add_completion=False)
 
 @cli.command()
 def hello_world(
-        name: Annotated[str, typer.Option(help="Your name.")] = "cowboy"
+    name: Annotated[str, typer.Option(help="Your name.")] = "World",
 ) -> str:
     """Hello."""
-    logger.info(f"We are here, {name}")
-    return f"We are here, {name}"
+    logger.info(f"Hello, {name}")
+    return f"Hello, {name}"
 
 
 if __name__ == "__main__":
