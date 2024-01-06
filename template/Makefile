@@ -24,6 +24,7 @@ clean:
 	@rm -rf build
 	@rm -rf dist
 	@rm -rf docs
+	@rm -rf .coverage
 
 ## Format files using Ruff
 format:
