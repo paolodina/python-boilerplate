@@ -13,6 +13,10 @@ _message_after_copy: |
 project_name:
   type: str
   help: "Your project name:"
+  validator: >-
+    {% if not (project_name | regex_search('^[a-zA-Z][a-zA-Z0-9\-_\s]*[a-zA-Z0-9]$')) %}
+    project_name must start with a letter, followed by one or more word characters or dashes, and end with a letter or digit.
+    {% endif %}
 
 python_package_name:
   type: str
