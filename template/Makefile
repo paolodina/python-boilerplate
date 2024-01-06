@@ -15,6 +15,8 @@ install-dev: install
 clean:
 	@rm -rf .ipynb_checkpoints
 	@rm -rf **/.ipynb_checkpoints
+	@rm -rf .mypy_cache
+	@rm -rf .ruff_cache
 	@rm -rf .pytest_cache
 	@rm -rf **/.pytest_cache
 	@rm -rf __pycache__
