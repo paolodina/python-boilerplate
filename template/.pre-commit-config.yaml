@@ -11,7 +11,7 @@ repos:
         args: [ --assume-in-merge ]
 - repo: https://github.com/astral-sh/ruff-pre-commit
   # Ruff version.
-  rev: v0.0.290
+  rev: v0.1.11
   hooks:
     - id: ruff
       args: [--fix]

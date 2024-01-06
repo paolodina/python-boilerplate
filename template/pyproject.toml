@@ -23,7 +23,7 @@ dependencies = [
 dev = [
   "pytest>=7.2.0",
   "pytest-cov>=4.0.0",
-  "ruff==0.0.290",
+  "ruff==0.1.11",
   "mypy==1.7.1",
   "watchdog>=2.1.9",
   "httpx>=0.23.2",
