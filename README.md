@@ -8,20 +8,47 @@ Special thanks:
 
 ## ✨ Quick start
 
+Create a new project called `myproject`.
+
+### pip version
+
 To create a new project from this template, simply run:
 
 ```shell
-pip install copier
-copier copy -r devel https://github.com/paolodina/python-boilerplate path/to/destination
+$ pwd
+/home/user/devel/myproject
+$ python -m venv .venv
+$ . .venv/bin/activate
+pip install -U pip copier
+copier copy -r devel https://github.com/paolodina/python-boilerplate .
+# Answer the questions, project name: myproject
+$ git init && git add . && git commit -m 'first commit'
+$ make install-dev
+# ...wait...
+$ myproject
+[03/17/24 15:48:27] INFO     Hello, World   main.py:16
 ```
 
-or
+### pipx version
+
+To create a new project from this template, simply run:
 
 ```bash
-pipx run copier copy -r devel https://github.com/paolodina/python-boilerplate path/to/destination
+$ pwd
+/home/user/devel
+$ pipx run copier copy -r devel https://github.com/paolodina/python-boilerplate myproject
+# Answer the questions, project name: myproject
+$ cd myproject
+$ git init && git add . && git commit -m 'first commit'
+$ python -m venv .venv
+$ . .venv/bin/activate
+$ make install-dev
+# ...wait...
+$ myproject
+[03/17/24 15:48:27] INFO     Hello, World   main.py:16
 ```
 
-Answer the prompt questions and enjoy!
+Enjoy!
 
 ### 📐 Design choices
 
